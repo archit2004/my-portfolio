@@ -29,21 +29,39 @@ const PROFILE = {
   location: "Vellore, India",
   email: "tiwariarchit2004@gmail.com",
   linkedin: "https://linkedin.com/in/archit-tiwari-a74972247",
-  resumeLink: "/Resume_ArchitTiwari.pdf" 
+  github: "https://github.com/archit2004", 
 };
 
+// UPDATED EXPERIENCE SECTION
 const EXPERIENCE = [
+  {
+    role: "Student Placement Coordinator",
+    company: "VIT Placement Cell",
+    period: "May 2025 - Present",
+    desc: [
+      "Coordinated placement drives for 100+ students, ensuring efficient recruiter communication.",
+      "Streamlined stakeholder workflows and managed company interactions during drives.",
+      "Improved communication turnaround time between teams by 20%."
+    ]
+  },
+  {
+    role: "AI/ML Senior Core Member",
+    company: "Robovitics Club",
+    period: "May 2024 - Present",
+    desc: [
+      "Organized large-scale technical events including Vortex360 (72hr designathon) and Design to Duel.",
+      "Led event logistics, sponsorship outreach, and technical coordination.",
+      "Published technical articles on GANs and AI; mentored 100+ students in robotics and ML."
+    ]
+  },
   {
     role: "Electronics & Design Lead",
     company: "Team Orcus (Combat Robotics)",
-    period: "2022 - Present",
-    desc: "Leading the design of 8kg–60kg combat robots. Specialized in high-current PCB design, ESC calibration, and pneumatic weapon systems. Managed cross-functional teams during international competitions."
-  },
-  {
-    role: "AI Researcher / Developer",
-    company: "Academic Projects & Hackathons",
-    period: "2023 - Present",
-    desc: "Developed multiple GenAI applications including emotion-aware chatbots and low-latency speech agents. Conducted research on GNNs for facial landmark detection."
+    period: "May 2024 - Present",
+    desc: [
+      "Designed PCBs and integrated electronics for 8kg, 15kg, and 60kg combat robots.",
+      "Collaborated across mechanical, electronics, and software teams for end-to-end development."
+    ]
   }
 ];
 
@@ -139,7 +157,8 @@ const HeroSection = () => {
       {/* MOBILE HERO (Visible only on small screens) */}
       <div className="md:hidden flex flex-col items-center justify-center h-full px-6 text-center z-20 relative pt-20">
         <div className="w-32 h-32 rounded-full border-4 border-blue-500 overflow-hidden mb-6 shadow-blue-900/50 shadow-lg">
-           <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Archit&backgroundColor=b6e3f4&clothing=blazerAndShirt" alt="Archit" className="w-full h-full object-cover" />
+           {/* IMPORTANT: Ensure 'profile.jpeg' is inside the 'public' folder */}
+           <img src="/profile.jpeg" alt="Archit" className="w-full h-full object-cover" />
         </div>
         <h1 className="text-4xl font-bold text-white mb-2">{PROFILE.name}</h1>
         <p className="text-blue-400 font-medium mb-4">{PROFILE.role}</p>
@@ -212,6 +231,7 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-500 blur-xl opacity-20 group-hover:opacity-40 transition rounded-full"></div>
+            {/* IMPORTANT: Ensure 'profile.jpeg' is inside the 'public' folder */}
             <img 
               src="/profile.jpeg" 
               alt="Profile" 
@@ -339,7 +359,16 @@ export default function App() {
                 <div className="text-blue-400 font-medium mb-3 flex items-center gap-2">
                   <Briefcase size={16} /> {exp.company}
                 </div>
-                <p className="text-slate-400 max-w-2xl">{exp.desc}</p>
+                {/* Renders as a bullet list if it's an array, otherwise simple text */}
+                {Array.isArray(exp.desc) ? (
+                  <ul className="list-disc pl-4 space-y-2 text-slate-400 max-w-2xl">
+                    {exp.desc.map((point, idx) => (
+                      <li key={idx} className="pl-1">{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-slate-400 max-w-2xl">{exp.desc}</p>
+                )}
               </div>
             ))}
           </div>
@@ -454,7 +483,7 @@ export default function App() {
               <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="p-4 bg-slate-900 text-white rounded-xl hover:bg-slate-800 border border-slate-800 transition">
                 <Linkedin />
               </a>
-              <a href="#" className="p-4 bg-slate-900 text-white rounded-xl hover:bg-slate-800 border border-slate-800 transition">
+              <a href={PROFILE.github} target="_blank" rel="noreferrer" className="p-4 bg-slate-900 text-white rounded-xl hover:bg-slate-800 border border-slate-800 transition">
                 <Github />
               </a>
             </div>
