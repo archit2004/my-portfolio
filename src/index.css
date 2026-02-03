@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%; /* Ensures full width */
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%; /* This fixes the max-width issue */
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Resets default centered text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
