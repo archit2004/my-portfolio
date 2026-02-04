@@ -11,7 +11,7 @@ export const PROFILE = {
   email: "tiwariarchit2004@gmail.com",
   linkedin: "https://linkedin.com/in/archit-tiwari-a74972247",
   github: "https://github.com/archit2004", 
-  resumeLink: "#" // Add your resume link here
+  resumeLink: "/public/Archit_Tiwari_Resume.pdf"
 };
 
 export const EXPERIENCE = [
