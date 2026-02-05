@@ -51,7 +51,7 @@ export const EDUCATION = [
     degree: "B.Tech Computer Science (IoT)",
     school: "VIT Vellore",
     period: "2022 - 2026",
-    details: "CGPA: 8.86 | Core Member of Robotics Club"
+    details: "CGPA: 8.88 | Core Member of Robotics Club"
   }
 ];
 
