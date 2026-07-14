@@ -47,7 +47,28 @@ export const EXPERIENCE = [
     company: "VIT Placement Cell",
     period: "May 2025 - Present",
     desc: [
-      "Coordinated hybrid placement drives for 100+ students, managing recruiter-student alignment and stakeholders."
+      "Coordinated hybrid placement drives for 100+ students, managing recruiter-student alignment and stakeholders.",
+      "Streamlined stakeholder workflows and managed company interactions during drives.",
+      "Improved communication turnaround time between teams by 20%."
+    ]
+  },
+  {
+    role: "AI/ML Senior Core Member",
+    company: "Robovitics Club",
+    period: "May 2024 - Present",
+    desc: [
+      "Organized large-scale technical events including Vortex360 (72hr designathon) and Design to Duel.",
+      "Led event logistics, sponsorship outreach, and technical coordination.",
+      "Published technical articles on GANs and AI; mentored 100+ students in robotics and ML."
+    ]
+  },
+  {
+    role: "Electronics & Design Lead",
+    company: "Team Orcus (Combat Robotics)",
+    period: "May 2024 - Present",
+    desc: [
+      "Designed PCBs and integrated electronics for 8kg, 15kg, and 60kg combat robots.",
+      "Collaborated across mechanical, electronics, and software teams for end-to-end development."
     ]
   }
 ];
@@ -79,18 +100,20 @@ export const ACHIEVEMENTS = [
   { title: "Winner – Samsung GenAI Hackathon", icon: Trophy, color: "text-yellow-400" },
   { title: "1st Place – INNOAI Hackathon", icon: Trophy, color: "text-yellow-400" },
   { title: "1st – IIT Kanpur Robowars (60kg)", icon: Trophy, color: "text-amber-400" },
-  { title: "1st – IIT Bombay Int. Robowars", icon: Trophy, color: "text-amber-400" }
+  { title: "1st – IIT Bombay Int. Robowars", icon: Trophy, color: "text-amber-400" },
+  { title: "1st – BITS Hyd Robowars (8kg)", icon: Trophy, color: "text-amber-400" }
 ];
 
 export const SKILLS = {
   "Languages": ["C/C++", "Python", "Java", "C#", "R", "JavaScript", "Bash", "SQL"],
   "AI & ML": [
     "PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "LangChain", "LangGraph",
-    "MediaPipe", "RAG Pipelines", "Vector Search", "Agentic AI", "GNNs", "Prompt Engineering"
+    "MediaPipe", "OpenCV", "Gemini API", "RAG Pipelines", "Vector Search",
+    "Agentic AI", "Multi-Agent Systems", "Prompt Engineering", "Fine-Tuning", "GNNs", "Deep Learning"
   ],
-  "Robotics & IoT": ["PCB Design", "Embedded Systems", "ESP32", "Arduino", "InfluxDB", "Telegraf"],
-  "Dev & Tools": ["React", "Node.js", "FastAPI", "REST APIs", "Microservices", "Docker", "AWS", "AWS S3", "Git", "CI/CD"],
-  "Creative": ["Blender (3D Animation)", "Unity Engine", "Fusion 360", "KiCad"]
+  "Robotics & IoT": ["PCB Design", "Embedded Systems", "ESP32", "Arduino", "Raspberry Pi", "Sensors", "InfluxDB", "Telegraf"],
+  "Dev & Tools": ["React", "Node.js", "FastAPI", "REST APIs", "MERN Stack", "Microservices", "Docker", "AWS", "AWS S3", "Git", "CI/CD (GitHub Actions)", "Postman", "Linux CLI"],
+  "Creative": ["Blender (3D Animation)", "Unity Engine", "Adobe Creative Suite", "Fusion 360", "KiCad"]
 };
 
 export const PROJECTS = [
@@ -103,27 +126,43 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    title: "GenAI Training Simulation",
+    title: "Climb the Corporate Ladder",
     category: "AI & Tech",
     role: "Samsung Gen AI Hackathon – Winner",
-    desc: "Interactive Unity simulation with autonomous AI agents; pilot testing showed a 15% increase in user public speaking confidence. Built a low-latency speech-to-speech pipeline (Whisper, Coqui) reducing interaction delay by 40%, orchestrated via FastAPI for concurrent stateful conversations.",
-    tags: ["Unity", "LangGraph", "FastAPI", "Whisper"],
+    desc: "Immersive Unity 6 roleplay simulation using LangGraph agents to help users practice real workplace scenarios. Pilot testing showed a 15% increase in user public speaking confidence. Built a low-latency speech-to-speech pipeline (Whisper, Coqui) reducing interaction delay by 40%, orchestrated via FastAPI for concurrent stateful conversations.",
+    tags: ["Unity", "LangGraph", "GenAI", "FastAPI", "Whisper"],
     link: "#"
   },
   {
     title: "Facial Emotion GNN",
     category: "AI & Tech",
     role: "ML Engineer",
-    desc: "Trained a Graph Neural Network on 40,000+ facial landmarks, achieving 60% accuracy in real-world emotion classification. Optimized PostgreSQL data retrieval, reducing landmark update latency by 25% for real-time MediaPipe processing.",
-    tags: ["GNN", "PyTorch", "PostgreSQL", "MediaPipe"],
+    desc: "Emotion-aware, GNN-powered model trained on 40,000+ facial landmarks, achieving 60% real-world emotion classification accuracy. Optimized PostgreSQL data retrieval, reducing landmark update latency by 25% for real-time MediaPipe processing.",
+    tags: ["GNN", "PyTorch", "NLP", "PostgreSQL", "MediaPipe"],
     link: "#"
   },
   {
     title: "Team Orcus Combat Bots",
     category: "Robotics",
-    role: "Electronics & Design Lead",
+    role: "Lead Engineer",
     desc: "Designed and manufactured 60kg class combat robots. Implemented custom drive trains and weapon motor controllers.",
     tags: ["PCB Design", "SolidWorks", "Electronics"],
+    link: "#"
+  },
+  {
+    title: "Pet Healthcare Portal",
+    category: "AI & Tech",
+    role: "Full Stack Dev",
+    desc: "OCR-based web application that extracts prescription data with 90% accuracy to automate pet medication ordering.",
+    tags: ["React", "Node.js", "OCR", "MongoDB"],
+    link: "#"
+  },
+  {
+    title: "Blender Mechanics",
+    category: "Creative",
+    role: "3D Artist",
+    desc: "A portfolio of cinematic mechanical animations and simulations focusing on realistic physics and lighting.",
+    tags: ["Blender", "3D Modeling", "Animation"],
     link: "#"
   }
 ];
